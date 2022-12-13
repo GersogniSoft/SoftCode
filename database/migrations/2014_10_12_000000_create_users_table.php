@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', array('user', 'redac', 'admin'))->default('admin');
+            $table->enum('role', array('user', 'redac', 'admin'))->default('user');
             $table->boolean('valid')->default(true);
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
